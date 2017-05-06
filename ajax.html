@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.js"></script>
+    <!--<link href="/css/global.css" rel="stylesheet" />-->
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li>
+                姓名:<span class="name"></span>
+            </li>
+            <li>
+                年龄:<span class="nl"></span>
+            </li>
+            <li>
+                项目:<span class="xm">
+
+    </span>
+    </li>
+    </ul>
+    </div>
+</body>
+<script>
+    $.ajax({
+        type: "GET",
+        url: "jianjie.json",
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+            $('.name').text(data.name);
+            $('.nl').text(data.nianling);
+            for(var i=0;i<data.xiangmu.length;i++){
+                var name=data.xiangmu[i].name;
+                var url=data.xiangmu[i].url;
+$('.xm').append('<div>项目名称：<span class="xmname">'+name+'</span>项目地址：<span class="xmurl">'+url+'</span></div>');
+            }
+        }
+    })
+
+</script>
+
+</html>
