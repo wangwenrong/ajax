@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title> new document </title>  
+ </head> 
+ <body> 
+	   <table border="1" width="50%" id="table">
+	   <tr>
+		<th>学号</th>
+		<th>姓名</th>
+		<th>操作</th>
+	   </tr>  
+
+	   <tr>
+		<td>xh001</td>
+		<td>王小明</td>
+		<td><a href="javascript:void(0);" onclick="del(this)" >删除</a></td>   <!--在删除按钮上添加点击事件  -->
+	   </tr>
+
+	   <tr>
+		<td>xh002</td>
+		<td>刘小芳</td>
+		<td><a href="javascript:void(0);" onclick="del(this)"  >删除</a></td>   <!--在删除按钮上添加点击事件  -->
+	   </tr>  
+
+	   </table>
+	   <input type="button" value="添加一行" onclick="tj()"  />   <!--在添加按钮上添加点击事件  -->
+ </body>
+
+  <script type="text/javascript"> 
+  var aaa='aaa';
+  function bbb(){
+      aaa='cccc';
+      var aaa='vvv';
+      console.log(aaa);
+  }
+  bbb();
+  console.log(aaa);
+      window.onload = function(){
+                  
+     // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
+     var tr=document.getElementsByTagName("tr");
+     for(var i=0;i<tr.length;i++){
+         tr[i].onmouseover=function(){
+             this.style.background='#f2f2f2';
+         }
+         tr[i].onmouseout=function(){
+             this.style.background='#fff';
+             
+         }
+     }		
+	 }
+     
+      // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+    function tj(){
+        var table=document.getElementById('table');
+        var newtr=document.createElement('tr');
+        newtr.innerHTML="我是新成员哦！"
+        table.appendChild(newtr);
+    } 
+    		
+   	 
+     // 创建删除函数
+          function del(obj){
+            var table=obj.parentNode.parentNode.parentNode;
+            var tr=obj.parentNode.parentNode;
+            table.removeChild(tr);
+        }     
+
+
+  </script> 
+</html>

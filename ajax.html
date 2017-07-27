@@ -20,11 +20,9 @@
                 年龄:<span class="nl"></span>
             </li>
             <li>
-                项目:<span class="xm">
-
-    </span>
-    </li>
-    </ul>
+                项目:<span class="xm"></span>
+            </li>
+        </ul>
     </div>
 </body>
 <script>
@@ -36,10 +34,10 @@
             console.log(data);
             $('.name').text(data.name);
             $('.nl').text(data.nianling);
-            for(var i=0;i<data.xiangmu.length;i++){
-                var name=data.xiangmu[i].name;
-                var url=data.xiangmu[i].url;
-$('.xm').append('<div>项目名称：<span class="xmname">'+name+'</span>项目地址：<span class="xmurl">'+url+'</span></div>');
+            for (var i = 0; i < data.xiangmu.length; i++) {
+                var name = data.xiangmu[i].name;
+                var url = data.xiangmu[i].url;
+                $('.xm').append('<div>项目名称：<span class="xmname">' + name + '</span>项目地址：<span class="xmurl">' + url + '</span></div>');
             }
         }
     })

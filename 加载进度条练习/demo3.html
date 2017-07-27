@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>定时器的进度条2</title>
+<style>
+    body img{
+        width: 100%;
+    }
+    .loading{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: #fff;
+    }
+    .loading>.pic{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid red;
+        background: url(images/img1.jpg);
+    }
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+    document.onreadystatechange=function(){   //页面加载状态改变时的事件
+        if(document.readyState=="complete"){  //返回当前文档的状态
+            $('.loading').fadeOut();
+        }
+    } 
+</script>
+</head>
+<body>
+ <div class="loading"><div class="pic"></div></div>   
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/b03533fa828ba61e5e6d4c0d4b34970a304e5915.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/b03533fa828ba61e5e6d4c0d4b34970a304e5915.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/b03533fa828ba61e5e6d4c0d4b34970a304e5915.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img1.91.com/uploads/allimg/130814/32-130Q4164349.jpg"/>
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img8.zol.com.cn/bbs/upload/23197/23196117.jpg" alt="">
+<img src="http://img8.zol.com.cn/bbs/upload/23197/23196117.jpg" alt="">
+<img src="http://img8.zol.com.cn/bbs/upload/23197/23196117.jpg" alt="">
+</body>
+</html>

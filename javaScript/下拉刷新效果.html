@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+</head>
+<style>
+    .pull-down {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+    }
+
+    .pull-down-content {
+        position: absolute;
+        bottom: 0;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <!-- #pull-down为下拉加载更多的提醒 -->
+        <div id="pull-down" class="pull-down">
+            <div class="pull-down-content">
+                松手加载更多内容
+            </div>
+        </div>
+
+        <!-- .list是正文内容 -->
+        <ul class="list">
+            <li>内容1内容1内容1内容1内容1内容1</li>
+            <li>内容2内容2内容2内容2内容2内容2内容2内容2内容2</li>
+            <li>内容1内容1内容1内容1内容1内容1</li>
+            <li>内容2内容2内容2内容2内容2内容2内容2内容2内容2</li>
+            <li>内容1内容1内容1内容1内容1内容1</li>
+            <li>内容2内容2内容2内容2内容2内容2内容2内容2内容2</li>
+            <li>内容1内容1内容1内容1内容1内容1</li>
+            <li>内容2内容2内容2内容2内容2内容2内容2内容2内容2</li>
+            <li>内容1内容1内容1内容1内容1内容1</li>
+            <li>内容2内容2内容2内容2内容2内容2内容2内容2内容2</li>
+            <li>内容1内容1内容1内容1内容1内容1</li>
+            <li>内容2内容2内容2内容2内容2内容2内容2内容2内容2</li>
+            <!-- 好长的li内容 -->
+        </ul>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        window.addEventListener('touchstart', touchstart, false);
+        window.addEventListener('touchmove', touchMove, false);
+    }
+
+    var _start = 0;
+    var _end = 0;
+    function touchstart(event) {
+        var touch = event.targetTouches[0];
+        _start = touch.pageY;
+    }
+    function touchMove(event) {
+        var touch = event.targetTouches[0];
+        _end = (touch.pageY - _start);
+        //下滑才执行操作 
+        if (_end > 200) {     //200即手机下滑屏幕的距离，超过200则执行刷新动作
+            location.reload();
+        }
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!--
+    基本图形：
+            <rect>矩形     x y width height rx ry圆角
+            <circle>圆型   cx cy r半径
+            <ellipse>椭圆  cx cy rx ry
+            <line>直线     x1 y1 x2 y2
+            <polyline>折线 points(xi,yi)+
+            <polygon>多边形 points(xi,yi)+
+    基本属性:
+            fill    填充颜色
+            stroke  描边颜色
+            stroke-width    描边粗细
+            transform   变形
+    基本操作API：
+            创建图形
+            document.createElementNS(ns,tagName)
+            添加图形
+            element.appendChild(childElement)
+            设置/获取图形
+            element.setAttribute(name,value)
+            element.getAttribute(name)
+-->
+
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
+
+    <defs>
+    <radialGradient id="grey_blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" style="stop-color:rgb(200,200,200);stop-opacity:0"/>
+        <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1"/>
+    </radialGradient>
+    </defs>
+
+    <ellipse cx="230" cy="200" rx="110" ry="100" style="fill:url(#grey_blue)"/>
+
+    <path d="M80 80
+            A 45 45, 0, 0, 0, 125 125
+            L 125 80 Z" fill="green"/>
+    <path d="M230 80
+            A 45 45, 0, 1, 0, 275 125
+            L 275 80 Z" fill="red"/>
+    <path d="M80 230
+            A 45 45, 0, 0, 1, 125 275
+            L 125 230 Z" fill="purple"/>
+    <path d="M230 230
+            A 45 45, 0, 1, 1, 275 275
+            L 275 230 Z" fill="blue"/>
+    <path id="my_path" d="M 100 200 Q 200 100 300 200 T 500 200" stroke="rgb(0,255,0)" fill="none" />
+    <text>
+        <textPath xlink:href="#my_path">This text follows a curve.</textPath>
+    </text>
+</svg>

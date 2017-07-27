@@ -1,0 +1,461 @@
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+}
+
+legend {
+  color: #000;
+}
+
+html, body {
+  height: 100%;
+}
+
+a, input, select, textarea {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+textarea:focus, keygen:focus, select:focus {
+  outline-offset: -2px;
+}
+
+body {
+  background: #eee;
+  width: 100%;
+}
+
+.top > .in, #app > .bottom, .blockItem .itemIn, .itemInner, .toolbarTop, .colorBlock > .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.enrich {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#app {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.28rem;
+  width: 100%;
+}
+
+#app .top {
+  height: 1rem;
+  line-height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 0.01rem solid #ddd;
+}
+
+#app .top .in {
+  color: #007aff;
+}
+
+#app .top .in .back {
+  width: 1.5rem;
+  padding-left: 0.2rem;
+  color: #007aff;
+}
+
+#app .top .in .right {
+  width: 1rem;
+}
+
+#app .top .topInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 0.38rem;
+}
+
+#app .warp {
+  height: 100%;
+  padding: 1rem 0 1rem 0;
+  box-sizing: border-box;
+}
+
+#app .warp .listBlock .blockItem {
+  position: relative;
+  background: #fff;
+}
+
+#app .warp .listBlock .blockItem a {
+  display: block;
+}
+
+#app .warp .listBlock .blockItem a:active {
+  background: #ddd;
+}
+
+#app .warp .listBlock .blockItem .itemIn {
+  padding-left: 0.2rem;
+}
+
+#app .warp .listBlock .blockItem .itemIn:active {
+  background: #ccc;
+}
+
+#app .warp .listBlock .blockItem .itemIn .icon i {
+  background: red;
+  display: block;
+}
+
+#app .warp .listBlock .blockItem .itemIn .icon .icon01 {
+  width: 0.6rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+
+#app .warp .listBlock .blockItem .itemIn .icon .icon02 {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(../images/dg.png);
+  background-size: 100%;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+#app .warp .listBlock .blockItem .itemIn .icon .icon02.active {
+  border: 0;
+  background: blue;
+}
+
+#app .warp .listBlock .blockItem .itemInner {
+  margin-left: 0.2rem;
+  border-bottom: 0.01rem solid #ddd;
+  box-sizing: border-box;
+  padding-right: 0.8rem;
+  min-height: 0.8rem;
+}
+
+#app .warp .listBlock .blockItem .itemInner .title {
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+
+#app .warp .listBlock .blockItem .itemInner .right {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#app .warp .listBlock .blockItem .itemInner .right.go {
+  background: url(../images/arrow001.png) 0 0 no-repeat;
+  background-size: 100%;
+  transform: rotateZ(0deg);
+  transition: transform 0.2s;
+}
+
+#app .warp .listBlock .blockItem .itemInner .right.go.active {
+  transform: rotateZ(90deg);
+  transition: transform 0.2s;
+}
+
+#app .warp .listBlock .blockItem .itemInner .right.dxk {
+  background: url(../images/dxk.png) 0 0 no-repeat;
+  background-size: 0.4rem;
+  background-position: calc(100% - 15px) center;
+}
+
+#app .warp .listBlock .blockItem .itemInner .choose {
+  color: #bdbdbd;
+}
+
+#app .warp .listBlock .blockItem .itemInner .itemInput {
+  width: 100%;
+  height: 0.8rem;
+}
+
+#app .warp .listBlock .blockItem .itemInner .itemInput input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+#app .warp .listBlock .blockItem .itemInner.active {
+  border-bottom: 0;
+}
+
+#app .warp .listBlock .blockItem .itemInner.go {
+  background: url(../images/arrow001.png) 0 0 no-repeat;
+  background-size: 0.5rem 0.5rem;
+  background-position: calc(100% - 15px) center;
+}
+
+#app .warp .listBlock .blockItem .itemInner.right {
+  background: url(../images/arrow001.png) 0 0 no-repeat;
+  background-size: 0.5rem 0.5rem;
+  background-position: calc(100% - 15px) center;
+}
+
+#app .bottom {
+  height: 1rem;
+  line-height: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  color: #007aff;
+  font-size: 0.3rem;
+  box-sizing: border-box;
+  border-top: 0.01rem solid #ddd;
+}
+
+#app .bottom .left {
+  width: 1.5rem;
+  padding-left: 0.2rem;
+  text-align: left;
+}
+
+#app .bottom .right {
+  width: 1.5rem;
+  padding-right: 0.2rem;
+  text-align: right;
+}
+
+#app .sfqList .blockItemContent {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#app .sfqList .blockItemContent .contentBlock {
+  padding: 0 0.2rem;
+  font-size: 0.24rem;
+  line-height: 0.36rem;
+}
+
+#app .sfqList .blockItemContent .contentBlock p {
+  margin: 0.2rem 0;
+}
+
+#app .sfqList .blockItemContent.active {
+  height: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#app .checkBox .labelCheck input {
+  display: none;
+}
+
+#app .titleFx {
+  color: gray;
+  margin: 0.4rem 0.2rem;
+}
+
+#app .titleFx p {
+  margin: 0.2rem 0;
+  font-size: 0.28rem;
+}
+
+#app .toolbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5.2rem;
+  background: #ddd;
+  border-top: 0.01rem solid #6d6d6d;
+}
+
+#app .toolbar .toolbarTop {
+  height: 0.8rem;
+  background: #fff;
+}
+
+#app .toolbar .toolbarTop .right {
+  width: 1rem;
+  font-size: 0.34rem;
+  color: #007aff;
+}
+
+#app .toolbar .toolbarInfo {
+  position: relative;
+  height: 4.4rem;
+}
+
+#app .toolbar .toolbarInfo .centerLine {
+  height: 0.7rem;
+  box-sizing: border-box;
+  border-bottom: 0.01rem solid #a5a5a5;
+  border-top: 0.01rem solid #a5a5a5;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 9;
+}
+
+#app .toolbar .toolbarInfo .toolbarCon {
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-1rem, -0.3rem);
+  opacity: 0.6;
+  overflow-y: auto;
+}
+
+#app .toolbar .toolbarInfo .toolbarCon .toolbarConInner {
+  height: auto;
+}
+
+#app .toolbar .toolbarInfo .toolbarCon .toolbarConInner p {
+  text-align: center;
+  line-height: 0.7rem;
+  font-size: 0.44rem;
+  font-weight: 700;
+}
+
+#app .colorBlock {
+  margin: 0.7rem 0;
+  padding-left: 0.3rem;
+}
+
+#app .colorBlock .row {
+  width: 100%;
+}
+
+#app .colorBlock .row .colColor {
+  width: 20%;
+  height: 0.88rem;
+  margin-bottom: 0.2rem;
+  margin-right: 0.3rem;
+}
+
+#app .colorBlock .row .bgWhite {
+  background: #fff;
+}
+
+#app .colorBlock .row .bgBlack {
+  background: #000;
+}
+
+#app .colorBlock .row .bgBlue {
+  background: #007aff;
+}
+
+#app .colorBlock .row .bgOrange {
+  background: orange;
+}
+
+#app .colorBlock .row .bgRed {
+  background: red;
+}
+
+#app .colorBlock .row .bgGreen {
+  background: green;
+}
+
+#app .colorBlock .row .bgYellow {
+  background: yellow;
+}
+
+#app .colorBlock .row .bgGray {
+  background: gray;
+}
+
+#app .colorBlock .row .bgPink {
+  background: pink;
+}
+
+#app .colorBlock .row .bgLightblue {
+  background: lightblue;
+}

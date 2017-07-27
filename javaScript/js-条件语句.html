@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div>
+        <span onclick="change(1)">数码</span>
+        <span onclick="change(2)">衣服</span>
+        <span onclick="change(3)">生活用品</span>
+        <span onclick="change(4)">家电</span>
+    </div>
+    <div>
+        <span id="content">shuma</span>
+
+    </div>
+</body>
+<script>
+    function change(id, name) {
+        // if(id==1){
+        // document.getElementById("content").innerHTML='shuma'
+        // }
+        // if(id==2){
+        // document.getElementById("content").innerHTML='yifu'
+        // }
+        // if(id==3){
+        // document.getElementById("content").innerHTML='shenghuoyongpin'
+        // }
+        // if(id==4){
+        // document.getElementById("content").innerHTML='jiadian'
+        // }
+
+        switch (id) {
+            case 1:
+                setContent("shuma");
+                break;
+            case 2:
+                setContent("yifu");
+                break;
+            case 3:
+                setContent("shenghuoyongpin");
+                break;
+            case 4:
+                setContent("jiadian");
+                break;
+        }
+        function setContent(title) {
+            document.getElementById("content").innerHTML = 'xuanzedeshi:' + title;
+        }
+    }
+    // && 与
+    // || 或
+    // ！ 非
+    var age = 40;
+    var name='wwr'
+    if( age == 2){
+
+    }
+    if(age==2&&name=='wwr'||age==4&&name=='jsc'){
+        alert('成功')
+    }
+    switch(age){
+        case 1:
+        case 2:
+        alert(1)
+        break;
+        case 3:
+        alert(1)
+        break;
+        case 4:
+        alert(1)
+        break;
+        case 5:
+        alert(1)
+        break;
+        default:
+        break;
+    }
+    /*
+ * Programming Quiz - Checking Your Balance (3-5)
+ */
+
+    // change the values of `balance`, `checkBalance`, and `isActive` to test your code
+    /*var balance = 325.00;//账户余额
+    var checkBalance = true;//是否想要查看余额 
+    var isActive = false;//账户是账户否为有效状
+
+    // your code goes here
+    if(checkBalance=false){
+        console.log("Thank you!have a nice day!");
+    }else if(balance>0){
+        console.log("Your balance is...");
+    }else if(isActive=fasle){
+        console.log("Your account is no longer active.");
+    }else if(balance=0){
+        console.log("Your account is empty.");
+    }else{
+        console.log("Your balance is negative.Please contact bank");
+    }*/
+
+    /*var flavor = "strawberry";
+    var vessel = "cone";
+    var toppings = "cookies";
+    var sc = "I\'d like two scoops of " + flavor + "ice cream in a" + vessel + " with" + toppings + "."
+
+    // Add your code here
+    if ((flavor = 'vanilla' || flavor === 'chocolate') && (vessel === 'cone' || vessel === 'bowl') && (toppings = 'sprinkles' || toppings === 'peanuts')) {
+        console.log(sc)
+    }*/
+
+    /*var shirtWidth = 23;
+    var shirtLength = 30;
+    var shirtSleeve = 8.71;
+    if((shirtWidth>=18&&shirtWidth<20)&&(shirtLength>=28&&shirtLength<29)&&(shirtSleeve>=8.13&&shirtSleeve<8.38)){
+        console.log('S');
+    }else if((shirtWidth>=20&&shirtWidth<22)&&(shirtLength>=29&&shirtLength<30)&&(shirtSleeve>=8.38&&shirtSleeve<8.63)){
+        console.log('M');
+    }else if((shirtWidth>=22&&shirtWidth<24)&&(shirtLength>=30&&shirtLength<31)&&(shirtSleeve>=8.63&&shirtSleeve<8.88)){
+        console.log('L');
+    }else if((shirtWidth>=24&&shirtWidth<26)&&(shirtLength>=31&&shirtLength<33)&&(shirtSleeve>=8.88&&shirtSleeve<9.63)){
+        console.log('XL');
+    }else if((shirtWidth>=26&&shirtWidth<28)&&(shirtLength>=33&&shirtLength<34)&&(shirtSleeve>=9.63&&shirtSleeve<10.13)){
+        console.log('2XL');
+    }else if(shirtWidth>=28&&shirtLength>=34&&shirtSleeve>=10.13){
+        console.log('3XL');
+    }else{
+        console.log( 'N/A');
+    }*/
+
+/*var eatsPlants = false;
+var eatsAnimals = true;
+
+var category = eatsPlants? "herbivore":"omnivore"&&eatsAnimals?"carnivore":undefined;
+
+console.log(category);*/
+       
+        
+
+
+
+
+
+
+</script>
+
+</html>

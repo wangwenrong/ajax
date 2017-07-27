@@ -1,0 +1,369 @@
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}
+html,body{height:100%}
+a, input, select, textarea {
+    outline: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+textarea:focus, keygen:focus, select:focus {
+    outline-offset: -2px;
+}
+$warp-width:100%;
+$warp-text:0.28rem;
+$textCl:#007aff;
+
+@mixin flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+@mixin flex-center{
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;  
+}
+@mixin flexOne{
+    -webkit-box-flex:1;-ms-flex:1;flex:1;
+}
+@mixin flex-content{
+/*老版本语法*/ -webkit-box-pack: center; -moz-box-pack: center; 
+/*混合版本语法*/ -ms-flex-pack: center; 
+/*新版本语法*/ -webkit-justify-content: center; justify-content: center;
+}
+body{
+    background: #eee;
+    width: $warp-width;
+}
+.top>.in,#app>.bottom,.blockItem .itemIn,.itemInner,.toolbarTop,.colorBlock>.row{
+    @include flex;
+    @include flex-center;
+}
+.enrich{
+    @include flexOne;
+}
+
+#app{
+    height: $warp-width;
+    overflow: hidden;
+    position: relative;
+    font-size:$warp-text;
+    width: $warp-width;
+    .top{
+        height: 1rem;
+        line-height: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-sizing: border-box;
+        border-bottom: 0.01rem solid #ddd;
+        .in{
+            color: $textCl;
+            .back{
+                width: 1.5rem;
+                padding-left: 0.2rem;
+                color: $textCl;
+            }
+            .right{
+                width: 1rem;
+            }
+        }
+        .topInfo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 0 1rem;
+            font-size: 0.38rem;
+            color: $textCl;
+        }
+
+    }
+    .warp{
+        height: 100%;
+        padding: 1rem 0 1rem 0;
+        box-sizing: border-box;
+        .listBlock{
+            .blockItem{
+                position: relative;
+                background: #fff;
+                a{
+                    display: block;
+                    &:active{
+                        background: #ddd;
+                    }                  
+                    }
+                    .itemIn{
+                        padding-left: 0.2rem;
+                        &:active{
+                            background: #ccc;
+                        }
+                        .icon{
+                            i{
+                                background: red;
+                                display: block;
+                            }
+                            .icon01{
+                                width: 0.6rem;
+                                height: 0.6rem;
+                                line-height: 0.6rem;
+                            }
+                            .icon02{
+                                width: 0.4rem;
+                                height: 0.4rem;
+                                background: url(../images/dg.png);
+                                background-size: $warp-width;
+                                border-radius: $warp-width / 2;
+                                border: 1px solid #ddd;
+                            }
+                            .icon02.active{
+                                border: 0;
+                                background: blue;
+                            }
+                        }
+                     }                    
+                        .itemInner{
+                            margin-left: 0.2rem;
+                            border-bottom: 0.01rem solid #ddd;
+                            box-sizing: border-box;
+                            padding-right: 0.8rem;
+                            min-height: 0.8rem;
+                            .title{
+                                height: 0.8rem;
+                                line-height: 0.8rem;
+                            }
+                            .right{
+                            width: 0.8rem;
+                            height:  0.8rem;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            }
+                            .right.go{
+                                background: url(../images/arrow001.png) 0 0 no-repeat;
+                                background-size: $warp-width;
+                                transform: rotateZ(0deg);
+                                transition: transform 0.2s;
+                            }
+                            .right.go.active{
+                                transform: rotateZ(90deg);
+                                transition: transform 0.2s;
+                            }
+                            .right.dxk{
+                                background: url(../images/dxk.png) 0 0 no-repeat;
+                                background-size: 0.4rem;
+                                background-position: calc(100% - 15px) center;
+                            }
+                            .choose{
+                                color: #bdbdbd;
+                            }
+                            .itemInput{
+                                width: $warp-width;
+                                height: 0.8rem;
+                                input{
+                                    display: block;
+                                    width: $warp-width;
+                                    height: $warp-width;
+                                    color: #000;
+                                }
+                            }
+                        }
+                        .itemInner.active{
+                            border-bottom: 0;
+                        }
+                        .itemInner.go{
+                            background: url(../images/arrow001.png) 0 0 no-repeat;
+                            background-size: 0.5rem 0.5rem;
+                            background-position: calc(100% - 15px) center;
+                        }
+                        .itemInner.right{
+                            background: url(../images/arrow001.png) 0 0 no-repeat;
+                            background-size: 0.5rem 0.5rem;
+                            background-position: calc(100% - 15px) center;
+                        }
+             
+                }
+            }
+        }
+    .bottom{
+        height: 1rem;
+        line-height: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        color: $textCl;
+        font-size: 0.3rem;
+        box-sizing: border-box;
+        border-top:  0.01rem solid #ddd;
+        .left{
+            width: 1.5rem;
+            padding-left: 0.2rem;
+            text-align: left;
+        }
+        .right{
+            width: 1.5rem;
+            padding-right: 0.2rem;
+            text-align: right;
+        }
+    }
+    // 手风琴页面
+    .sfqList{
+        .blockItemContent{
+            height: 0;
+            width: $warp-width;
+            overflow: hidden;    
+            position: relative;
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 1s;
+            transition: all 1s;
+            .contentBlock{
+                padding: 0 0.2rem;
+                font-size: 0.24rem;
+                line-height: 0.36rem;
+                p{
+                    margin: 0.2rem 0;
+                }
+            }
+        }
+        .blockItemContent.active{
+            height: auto;
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 1s;
+            transition: all 1s;
+        }
+    }
+    // 复选框页面
+    .checkBox{
+        .labelCheck{
+            input{
+                display: none;
+            }
+        }
+    }
+    .titleFx{
+        color: gray;
+        margin: 0.4rem 0.2rem;
+        p{
+            margin: 0.2rem 0;
+            font-size: 0.28rem;
+        }
+    }
+    //选择器页面
+    .toolbar{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: $warp-width;
+        height: 5.2rem;
+        background: #ddd;
+        border-top: 0.01rem solid #6d6d6d;
+        .toolbarTop{
+            height: 0.8rem;
+            background: #fff;
+            .right{
+                width: 1rem;
+                font-size: 0.34rem;
+                color: $textCl;
+            }
+        }
+        .toolbarInfo{
+            position: relative;
+            height: 4.4rem;
+            .centerLine{
+                height: 0.7rem;
+                box-sizing: border-box;
+                border-bottom: 0.01rem solid #a5a5a5;
+                border-top: 0.01rem solid #a5a5a5;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                transform: translateY( - $warp-width / 2);
+                opacity: 1;
+                z-index: 9;
+            }
+            .toolbarCon{
+                width: 2rem;
+                height: $warp-width;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-1rem,-0.3rem);
+                opacity: 0.6;
+                overflow-y: auto;
+                .toolbarConInner{
+                    height: auto;
+                    p{
+                        text-align: center;
+                        line-height: 0.7rem;
+                        font-size: 0.44rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    //彩色主题页面
+    .colorBlock{
+    margin: 0.7rem 0;
+    padding-left: 0.3rem;
+        .row{
+            width: $warp-width;
+            .colColor{
+                width: 20%;
+                height: 0.88rem;
+                margin-bottom: 0.2rem;
+                margin-right: 0.3rem;
+            }
+            .bgWhite{
+                background: #fff;
+            }
+            .bgBlack{
+                background: #000;
+            }
+            .bgBlue{
+                background: #007aff;
+            }
+            .bgOrange{
+                background: orange;
+            }
+            .bgRed{
+                background: red;
+            }
+            .bgGreen{
+                background: green;
+            }
+            .bgYellow{
+                background: yellow;
+            }
+            .bgGray{
+                background: gray;
+            }
+            .bgPink{
+                background: pink;
+            }
+            .bgLightblue{
+                background: lightblue;
+            }
+        }
+    }
+}
+
+
+
+
+
+

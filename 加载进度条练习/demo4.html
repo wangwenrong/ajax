@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>定时器的进度条2</title>
+<style>
+    body img{
+        width: 100%;
+    }
+    .loading{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: #fff;
+    }
+    .loading>.pic{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 30px;
+        text-align: center;
+        line-height: 100px;
+    }
+    .loading>.pic>span{
+        display: block;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        margin: 10px;
+        border-radius: 50%;
+        box-shadow: 0 3px 0 #000;
+        animation: rotate 1s infinite linear; /*infinite重复循环*/
+        -webkit-animation: rotate 1s infinite linear;
+    }
+
+    @-webkit-keyframes rotate{
+        0%{-webkit-transform: rotate(0deg);}
+        100%{-webkit-transform: rotate(360deg);}
+    }
+    @keyframes rotate{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function(){
+        var img=$('img');
+        var num=0;
+            img.each(function(i){
+                var newImg=new Image();
+                newImg.onload=function(){
+                    newImg.onload=null;
+                    num++;
+                    $('.loading b').html(parseInt(num/img.size()*100)+'%')
+                    if(num>=i){
+                        $('.loading').fadeOut();
+                    }
+                }
+                
+                newImg.src=img[i].src;
+
+            })
+    })
+    document.onreadystatechange=function(){   //页面加载状态改变时的事件
+        if(document.readyState=="complete"){  //返回当前文档的状态
+            $('.loading').fadeOut();
+        }
+    } 
+</script>
+</head>
+<body>
+ <div class="loading">
+     <div class="pic">
+         <span></span>
+         <b>0%</b>
+     </div>
+</div>   
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/b03533fa828ba61e5e6d4c0d4b34970a304e5915.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/b03533fa828ba61e5e6d4c0d4b34970a304e5915.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/b03533fa828ba61e5e6d4c0d4b34970a304e5915.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img1.91.com/uploads/allimg/130814/32-130Q4164349.jpg"/>
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img0.imgtn.bdimg.com/it/u=1889295935,3725833157&fm=26&gp=0.jpg" alt="">
+<img src="http://img8.zol.com.cn/bbs/upload/23197/23196117.jpg" alt="">
+<img src="http://img8.zol.com.cn/bbs/upload/23197/23196117.jpg" alt="">
+<img src="http://img8.zol.com.cn/bbs/upload/23197/23196117.jpg" alt="">
+<img src="http://pic.58pic.com/58pic/15/15/35/08858PICGTF_1024.jpg" alt="">
+<img src="http://pic.jj20.com/up/allimg/811/062214143621/140622143621-3.jpg" alt="">
+<img src="http://imgstore.cdn.sogou.com/app/a/100540002/422288.jpg" alt="">
+<img src="http://imgsrc.baidu.com/imgad/pic/item/902397dda144ad34c9bf61a4daa20cf431ad8595.jpg" alt="">
+<img src="http://pic.58pic.com/58pic/14/89/92/52I58PICrs4_1024.jpg" alt="">
+<img src="http://img4.imgtn.bdimg.com/it/u=996004100,760371098&fm=200&gp=0.jpg" alt="">
+</body>
+</html>

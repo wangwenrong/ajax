@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+
+
+</body>
+<script>
+    // document.write('<table>')
+    // for (var i = 1; i < 10; i++) {
+    //     document.write('<tr>');
+    //     for (var j = 1; j < 10; j++)
+    //         if (j <= i) {
+    //             document.write('<td style="border:1px solid #000; background:#fff;">' + i + '*' + j + '=' + (i * j) + '</td>')
+    //         } else {
+    //             document.write('<td style="border>0;"></td>')
+    //         }
+    //     document.write('</tr>')
+    // }
+    // document.write('</table>')
+    //    var myarr=new Array();
+    // for(var i=0;i<5;i++){
+    //     myarr[i]=new Array();
+    //     for(var j=0;j<6;j++){
+    //         myarr[i][j]=i*j;
+    //     }
+    // };
+    // document.write(myarr[2][5]);
+
+    // var infos = [['小A', '女', 21, '大一'], ['小B', '男', 23, '大三'], ['小C', '男', 24, '大四'], ['小D', '女', 21, '大一'], ['小E', '女', 22, '大四'], ['小F', '男', 21, '大一'], ['小G', '女', 22, '大二'], ['小H', '女', 20, '大三'], ['小I', '女', 20, '大一'], ['小J', '男', 20, '大三']]
+    // //第一次筛选，找出都是大一的信息
+    // for (var i = 0; i < infos.length; i++) {
+
+    //     for (var j = 0; j < infos[i].length; j++) {
+
+    //         if (infos[i][j] == "大一") {
+
+    //             document.write(infos[i] + '<br>');
+
+    //         }
+
+    //     }
+
+    // }
+
+    // for (var i = 0; i < infos.length; i++) {
+
+    //     for (var j = 0; j < infos[i].length; j++) {
+
+    //         if (infos[i][j] == "女") {
+
+    //             document.write(infos[i] + '<br>');
+
+    //         }
+
+    //     }
+
+    // }
+    // function hasEnoughPlayers(team) {
+    //     var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+    //     console.log(hasEnoughPlayers(team));
+    //     if (team.length >= 7) {
+    //         console.log(true);
+    //     } else {
+    //         console.log(false);
+
+    //     }
+
+    // }
+    /*function add(a, b) {
+        for (var a = 0; a <= 5; a++) {
+            for (var b = 2; b <= 8; b++) {
+                var sum = a + b;
+                document.write("两个相加的值：" + sum + '<br>')
+            }
+        }
+    }
+    add();*/
+//     for( var x=12; x>0&&x<=12; x--){
+//     solution=x*x;
+//     console.log(solution);
+// }
+// function Animal(name){
+//   this.name = name;
+//   this.showName = function(){
+//         alert(this.name);    
+//     }    
+// }
+// function Cat(name){
+//   Animal.apply(this,[name]);    
+// }
+// var cat = new Cat("咕咕");
+// cat.showName();
+
+//定义一个Animal的类
+function Animal(name,age){
+   this.name = name;
+   this.age = age;
+}
+//定义一个cat类
+function Cat(name,age,kind){
+   Animal.apply(this,arguments);//调用Animal的方法，并将里面的this，转换成Cat实例
+   this.kind = kind;
+}
+var cat = new Cat('yingwu',4,'cat');
+console.log(cat)
+
+ </script>
+
+</html>

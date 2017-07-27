@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item{
+    width: 300px;
+    margin: 5px;
+}
+.item>.pic{
+    width: 300px;
+    height: 200px;
+}
+.item>.pic>img{
+    width: 100%;
+    height: 100%;
+}
+.item .price{
+    color: red;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.item .title{
+    color: #ccc;
+    font-size: 14px;
+}
+.pjXg{
+    display: flex;
+    font-size: 12px;
+}
+.pjXg>div.zw{
+    flex: 1;   
+}
+.pjXg>div{
+    line-height: 30px;
+}
+.cart{
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid red;
+    color: red;
+    cursor: pointer;
+}
+.cartYD{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transform: translateX(280px);
+    transition: transform 0.5s;
+}
+.cartYD.cur{
+    transform: translateX(0px);
+}
+.cartYD>.cartLeft{
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: red;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -15px;
+}
+.cartRight{
+    width: 280px;
+    height: 100%;
+    background: #fff;
+}
+.cartRight>.up{
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    background: #ddd;
+    display: flex;
+}
+.cartRight>.up>div{
+    flex: 1;
+}
+.cartRight>.up>span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.cartProduct>li{
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.cartProduct>li.cur{
+    opacity: 0;
+}
+
+.cartProduct>li>div.left{
+    width: 60px;
+    height: 60px;
+
+}
+.cartProduct>li>div.left>img{
+    width: 100%;
+    height: 100%;
+}
+.cartProduct>li>div.right{
+    width: 210px;
+    height: 60px;
+    margin-left: 10px;
+    position: relative;
+}
+.cartProduct>li>div.right>p.title2{
+    font-size: 12px;
+    line-height: 20px;
+}
+.cartProduct>li>div.right>p.price2{
+    margin-top: 5px;
+}
+.cartProduct>li>div.right>.del{
+    display: none;
+    color: blue;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    cursor: default;
+}
+
+
